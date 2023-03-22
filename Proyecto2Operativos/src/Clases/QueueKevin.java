@@ -20,7 +20,7 @@ public class QueueKevin <T> {
         this.size =0;
     }
 
-    public void enqueue (T data){
+    public void enqueue (SerieKevin data){
         QueueNodeKevin pAux = new QueueNodeKevin(data);
         if (this.isEmpty()){
             this.pFirst = pAux;
@@ -32,28 +32,41 @@ public class QueueKevin <T> {
         this.size +=1; 
     }
     
-    public void dequeue (T data) {
+    public void dequeue () {
         if (this.pFirst != null){
             this.pFirst = this.pFirst.getpNext();
             this.size --;
         } else {
             this.pLast = null;
+            this.size = 0;
         }
     }
     
-    public T peek(){
-        return (T) this.pFirst.getData();
+    public SerieKevin peek (){
+        return this.pFirst.getData();
     }
     
-    public QueueNodeKevin poll(){
+     public String printQueue(){
+        QueueNodeKevin aux = this.pFirst;
+        String text="";
+         while (aux != null) {
+            SerieKevin temp = (SerieKevin) aux.getData();
+            text = text + "ID: " + temp.getId() + " - PRIORIDAD: " + temp.getPrioridad() + " - CONTADOR:" + temp.getContador() + "\n";
+            aux = aux.getpNext();
+        }
+        return text;
+    }
+    
+    public SerieKevin poll(){
         QueueNodeKevin pAux = this.getpFirst();
          if (this.pFirst != null){
             this.pFirst = this.pFirst.getpNext();
             this.size --;
+            return pAux.getData();
         } else {
             this.pLast = null;
+            return null;
         }
-         return pAux;
     }
     
     public boolean isEmpty(){

@@ -9,11 +9,11 @@ package Clases;
  * @author Kevin Hernandez
  * Fecha: 13/03/2023
  */
-public class QueueNodeKevin<T> {
-    private T data;
+public class QueueNodeKevin {
+    private SerieKevin data;
     private QueueNodeKevin pNext;
 
-    public QueueNodeKevin(T data) {
+    public QueueNodeKevin(SerieKevin data) {
         this.data = data;
         this.pNext = null;
     }
@@ -21,14 +21,14 @@ public class QueueNodeKevin<T> {
     /**
      * @return the data
      */
-    public T getData() {
+    public SerieKevin getData() {
         return data;
     }
 
     /**
      * @param data the data to set
      */
-    public void setData(T data) {
+    public void setData(SerieKevin data) {
         this.data = data;
     }
 
