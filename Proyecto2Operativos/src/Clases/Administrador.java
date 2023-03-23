@@ -50,10 +50,8 @@ public class Administrador {
     
     public void aumentarContadorKevin(QueueKevin QueueKevin1, QueueKevin QueueKevin2){
         if(!QueueKevin1.isEmpty()){
-            for(int i=0; i < QueueKevin1.getSize()-1; i++){
+            for(int i=1; i < QueueKevin1.getSize(); i++){
                 SerieKevin temp = QueueKevin1.peek();
-                
-                System.out.println(temp.getContador());
                 temp.setContador(temp.getContador()+1);
                 if(temp.getContador() == 8){
                     temp.setContador(0);
@@ -63,8 +61,12 @@ public class Administrador {
                 }else{
                     QueueKevin1.dequeue();
                     QueueKevin1.enqueue(temp);
+                   
                 }
             }
+            QueueKevin1.getpFirst().getData().setContador(QueueKevin1.getpFirst().getData().getContador()+1);
+            
+            
         }
     }
     
