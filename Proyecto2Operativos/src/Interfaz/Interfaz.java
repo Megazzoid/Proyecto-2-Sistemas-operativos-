@@ -50,8 +50,6 @@ public class Interfaz extends javax.swing.JFrame {
         ColaRefuerzo = new javax.swing.JTextArea();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jScrollPane5 = new javax.swing.JScrollPane();
-        ColaRefDiego = new javax.swing.JTextArea();
         jScrollPane6 = new javax.swing.JScrollPane();
         ColaDiego1 = new javax.swing.JTextArea();
         jScrollPane7 = new javax.swing.JScrollPane();
@@ -67,122 +65,125 @@ public class Interfaz extends javax.swing.JFrame {
         CambiarTiempo = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jScrollPane9 = new javax.swing.JScrollPane();
+        ColaRefDiego = new javax.swing.JTextArea();
+        textoAdmin = new javax.swing.JTextField();
+        jLabel16 = new javax.swing.JLabel();
+        textoAI = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel2.setText("COLA PRIORIDAD 3 ");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 370, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 370, -1, -1));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/58f37720a4fa116215a9240f (3).png"))); // NOI18N
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 30, 210, 80));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 90, 210, 80));
 
         jLabel1.setBackground(new java.awt.Color(51, 51, 51));
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("                                              HBO MAX VZLA + ");
+        jLabel1.setText("                                                    HBO MAX VZLA + ");
         jLabel1.setNextFocusableComponent(jLabel1);
         jLabel1.setOpaque(true);
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1220, 80));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 80));
 
+        ColaKevin3.setEditable(false);
         ColaKevin3.setColumns(20);
         ColaKevin3.setRows(5);
         jScrollPane1.setViewportView(ColaKevin3);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 410, 209, 98));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 410, 230, 120));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel3.setText("COLA PRIORIDAD 1 ");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 183, -1, -1));
 
+        ColaKevin1.setEditable(false);
         ColaKevin1.setColumns(20);
         ColaKevin1.setRows(5);
         jScrollPane2.setViewportView(ColaKevin1);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 230, 209, 98));
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 230, 230, 120));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel4.setText("COLA PRIORIDAD 2 ");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 180, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 190, -1, -1));
 
+        ColaKevin2.setEditable(false);
         ColaKevin2.setColumns(20);
         ColaKevin2.setRows(5);
         jScrollPane3.setViewportView(ColaKevin2);
 
-        getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 230, 209, 98));
+        getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 230, 230, 120));
 
+        ColaRefuerzo.setEditable(false);
         ColaRefuerzo.setColumns(20);
         ColaRefuerzo.setRows(5);
         jScrollPane4.setViewportView(ColaRefuerzo);
 
-        getContentPane().add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 620, 209, 98));
+        getContentPane().add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 410, 230, 120));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel5.setText("COLA DE REFUERZO");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 570, -1, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 370, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         jLabel6.setText("ESTUDIO 1");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 120, -1, -1));
-
-        ColaRefDiego.setEditable(false);
-        ColaRefDiego.setColumns(20);
-        ColaRefDiego.setRows(5);
-        jScrollPane5.setViewportView(ColaRefDiego);
-
-        getContentPane().add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 610, -1, 100));
 
         ColaDiego1.setEditable(false);
         ColaDiego1.setColumns(20);
         ColaDiego1.setRows(5);
         jScrollPane6.setViewportView(ColaDiego1);
 
-        getContentPane().add(jScrollPane6, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 230, -1, 105));
+        getContentPane().add(jScrollPane6, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 210, 250, 140));
 
         ColaDiego2.setEditable(false);
         ColaDiego2.setColumns(20);
         ColaDiego2.setRows(5);
         jScrollPane7.setViewportView(ColaDiego2);
 
-        getContentPane().add(jScrollPane7, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 230, -1, 100));
+        getContentPane().add(jScrollPane7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 210, 250, 140));
 
         ColaDiego3.setEditable(false);
         ColaDiego3.setColumns(20);
         ColaDiego3.setRows(5);
         jScrollPane8.setViewportView(ColaDiego3);
 
-        getContentPane().add(jScrollPane8, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 420, -1, 100));
+        getContentPane().add(jScrollPane8, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 410, 250, 130));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         jLabel8.setText("ESTUDIO 2");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 120, -1, -1));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 110, -1, -1));
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel9.setText("COLA PRIORIDAD 1 ");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 180, -1, -1));
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 170, -1, -1));
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel10.setText("COLA PRIORIDAD 2 ");
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 180, -1, -1));
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 170, -1, -1));
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel11.setText("COLA PRIORIDAD 3 ");
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 370, -1, -1));
+        jLabel11.setText("AI revisando ID: ");
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 650, -1, -1));
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel12.setText("COLA DE REFUERZO");
-        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 560, -1, -1));
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 370, -1, -1));
 
         jLabel13.setText("Cambiar Velocidad");
-        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 750, -1, -1));
+        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 770, -1, -1));
 
         CambiarTiempo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CambiarTiempoActionPerformed(evt);
             }
         });
-        getContentPane().add(CambiarTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 750, 80, -1));
+        getContentPane().add(CambiarTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 770, 80, -1));
 
         jButton1.setText("Cambiar!");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -190,10 +191,43 @@ public class Interfaz extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 750, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 770, -1, -1));
 
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Rick-And-Morty-PNG-Images-HD (1).png"))); // NOI18N
-        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 340, 310, 400));
+        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 320, 310, 420));
+
+        jLabel15.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel15.setText("COLA PRIORIDAD 3 ");
+        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 370, -1, -1));
+
+        ColaRefDiego.setEditable(false);
+        ColaRefDiego.setColumns(20);
+        ColaRefDiego.setRows(5);
+        jScrollPane9.setViewportView(ColaRefDiego);
+
+        getContentPane().add(jScrollPane9, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 410, 250, 130));
+
+        textoAdmin.setEditable(false);
+        textoAdmin.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        textoAdmin.setText("Esperando");
+        textoAdmin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textoAdminActionPerformed(evt);
+            }
+        });
+        getContentPane().add(textoAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 640, 180, 40));
+
+        jLabel16.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel16.setText("AI revisando ID: ");
+        getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 570, -1, -1));
+
+        textoAI.setEditable(false);
+        textoAI.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textoAIActionPerformed(evt);
+            }
+        });
+        getContentPane().add(textoAI, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 570, 60, 40));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -214,6 +248,14 @@ public class Interfaz extends javax.swing.JFrame {
             
     }    
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void textoAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textoAdminActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textoAdminActionPerformed
+
+    private void textoAIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textoAIActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textoAIActionPerformed
     
     public void setTextColaKevin1(String text){
         ColaKevin1.setText(text);
@@ -296,6 +338,8 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -308,9 +352,11 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
+    private javax.swing.JScrollPane jScrollPane9;
+    private javax.swing.JTextField textoAI;
+    private javax.swing.JTextField textoAdmin;
     // End of variables declaration//GEN-END:variables
 }
