@@ -8,82 +8,80 @@ package Clases;
 /**
  *
  * @author danma
- * @param <T>
  */
-public class ColaDiego<T> {
+public class ColaDiego {
     
-    private NodoDiego<T> head;
-    private NodoDiego<T> tail;
+    NodoDiego head;
+    NodoDiego tail;
     int size;
     
     public ColaDiego(){
-        this.head = this.tail =null;
+        this.head = null;
+        this.tail =null;
         this.size = 0;
     }
     
-    public ColaDiego(SerieDiego datazo){
-        NodoDiego<T> nodo = new NodoDiego(datazo);
-        this.head = this.tail = nodo;
-        this.size = 1;
+    public boolean isEmpty(){
+        return this.size == 0;
     }
     
-    private boolean isEmpty(){
-        return this.head == null;
-    }
-    
-    public void EncolarDiego(T datazo){
-        NodoDiego<T> nodo = new NodoDiego(datazo);
-        this.size++;
+    public void Encolar(SerieDiego datazo){
+        NodoDiego n = new NodoDiego(datazo);
         if (isEmpty()){
-            this.head = this.tail = nodo;
+            this.head = n;
+            this.tail = n;
+            size++;
         } else {
-            this.tail.setNext(nodo);
-            this.tail = nodo;            
+            tail.next= n;
+            tail = n;
+            size++;
+        }
+
+    }
+    
+    public SerieDiego Desencolar(){
+        if(!isEmpty()){
+            SerieDiego first = head.data;
+            if(head==tail){
+                head=null;
+                tail=null;
+                size--;
+            }else{
+                head = head.next;
+                size--;
+            }
+            return first;
+        }else{
+            return null;
         }
     }
     
-    public T DesencolarDiego(){
-        if (isEmpty()){
-            return null;
-        }       
-        NodoDiego<T> temp = this.head;
-        this.head = temp.getNext();
-        temp.setNext(null);
-        this.size--;
-        return temp.getData();
-    }
-    
-    public String printCola(){
-        NodoDiego<T> aux = this.head;
+    public String getData(){
+        NodoDiego aux = this.head;
         String text="";
          while (aux != null) {
-            SerieDiego temp = (SerieDiego) aux.getData();
-            text = text + "ID: " + temp.getId() + " - PRIORIDAD: " + temp.getPrio() + " - CONTADOR:" + temp.getContador() + "\n";
-            aux = aux.getNext();
+            SerieDiego temp = aux.data;
+            text = text + "ID: " + temp.id + " - PRIORIDAD: " + temp.prio + " - CONTADOR:" + temp.contador + "\n";
+            aux = aux.next;
         }
         return text;
-    }
-    
-    public T peek(){
-        if (isEmpty()){
-            return null;
-        }       
-        NodoDiego<T> temp = this.tail;
-        return temp.getData();
     }
 
     public int getSize() {
         return size;
     }
 
-    public NodoDiego<T> getHead() {
-        return head;
-    }
-
-    public NodoDiego<T> getTail() {
-        return tail;
+    public void setSize(int size) {
+        this.size = size;
     }
     
-    
-    
+       public class NodoDiego {    
+    //Variables de Nodo
+        SerieDiego data;
+        NodoDiego next;
+    //Constructor
+    public NodoDiego(SerieDiego datazo) {        
+        this.data = datazo;
+        this.next = null;
+            }}
 }
