@@ -236,6 +236,10 @@ public class Interfaz extends javax.swing.JFrame {
     public void setTextColaDiego3(String text){
         ColaDiego3.setText(text);
     }
+    
+    public void setTextColaDiego4(String text){
+        ColaRefDiego.setText(text);
+    }
     /**
      * @param args the command line arguments
      */
