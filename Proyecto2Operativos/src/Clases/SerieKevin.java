@@ -10,9 +10,9 @@ package Clases;
  * @author kevin
  */
 public class SerieKevin {
-    private int id;
-    private int prioridad;
-    private int contador;
+    int id;
+    int prioridad;
+    int contador;
 
     public SerieKevin(int id, int prioridad, int contador) {
         this.id = id;

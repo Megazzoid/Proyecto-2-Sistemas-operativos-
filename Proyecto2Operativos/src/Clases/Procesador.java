@@ -25,32 +25,35 @@ public class Procesador {
 
         int prob = new Random().nextInt(100);
      
-            if (prob < 40) {
+            if (prob < 1) {
       
-            } else if (prob >= 40 && prob <= 67) {
+            } else if (prob >= 33 && prob <= 67) {
                 
             } else {
-            
-
-                    if(QueueKevin1.getpFirst() != null){
-                        SerieKevin temp = QueueKevin1.peek();
-                        QueueKevin1.dequeue();
-                        QueueKevinRefuerzo.enqueue(temp);
+                    if(!QueueKevin1.isVacio()){
+                        SerieKevin temp = QueueKevin1.extraer();
+                        temp.prioridad = 4;
+                        
+                        QueueKevinRefuerzo.insertar(temp);
 
                     }
-                    else if(QueueKevin2.getpFirst() != null){
+                    else if(!QueueKevin2.isVacio()){
+                        SerieKevin temp = QueueKevin2.extraer();
+                        temp.prioridad = 4;
                         
-                        SerieKevin temp = QueueKevin2.peek();
-                        QueueKevin2.dequeue();
-                        QueueKevinRefuerzo.enqueue(temp);
+                        QueueKevinRefuerzo.insertar(temp);
 
-                    }else if(QueueKevin3.getpFirst() != null){
-                        SerieKevin temp = QueueKevin3.peek();
-                        QueueKevin3.dequeue();
-                        QueueKevinRefuerzo.enqueue(temp);
+
+                    }else if(!QueueKevin3.isVacio()){
+                        SerieKevin temp = QueueKevin3.extraer();
+                        temp.prioridad = 4;
+                        
+                        QueueKevinRefuerzo.insertar(temp);
+
+                       
                     }
                     else{
-                        
+                        System.out.println("No paso"); 
                     }
             }  
             

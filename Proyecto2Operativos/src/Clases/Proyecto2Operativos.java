@@ -27,20 +27,18 @@ public class Proyecto2Operativos {
         Interfaz  interfaz = new Interfaz();
         interfaz.setVisible(true);
         interfaz.setLocationRelativeTo(null);
-        String text = "";
+        String text, text1, text2, text3, text4 = "";
         
         Thread.sleep(3000);
         
         while (true) {
-            administrador.crearSerieKevin();
-            text = administrador.prioridad1.printQueue();
-            interfaz.setTextColaKevin1(text);
-            text = administrador.prioridad2.printQueue();
-            interfaz.setTextColaKevin2(text);
-            text = administrador.prioridad3.printQueue();
-            interfaz.setTextColaKevin3(text);
+            
+            
             administrador.aumentarContadorKevin(administrador.prioridad3, administrador.prioridad2);
             administrador.aumentarContadorKevin(administrador.prioridad2, administrador.prioridad1);
+            
+            procesador.RevisarSeries(administrador.prioridad1, administrador.prioridad2, administrador.prioridad3, administrador.refuerzo, 
+            admin.prio1, admin.prio2, admin.prio3, admin.prioRef);
                        
             admin.SerieDiego();
             text = admin.prio1.printCola();
@@ -50,11 +48,22 @@ public class Proyecto2Operativos {
             text = admin.prio3.printCola();
             interfaz.setTextColaDiego3(text);
             
-            procesador.RevisarSeries(administrador.prioridad1, administrador.prioridad2, administrador.prioridad3, administrador.refuerzo, 
-            admin.prio1, admin.prio2, admin.prio3, admin.prioRef);
-            text = administrador.refuerzo.printQueue();
-            interfaz.setTextColaKevin4(text);
-          
+            administrador.crearSerieKevin();
+            
+            text2 = administrador.prioridad1.getData();
+            interfaz.setTextColaKevin1(text2);
+            System.out.println("Cola1"+text2);
+            text3 = administrador.prioridad2.getData();
+            interfaz.setTextColaKevin2(text3);
+            System.out.println("Cola2"+text3);
+            text4 = administrador.prioridad3.getData();
+            interfaz.setTextColaKevin3(text4);
+            System.out.println("Cola3"+text4);
+            
+            
+            text1 = administrador.refuerzo.getData();
+            interfaz.setTextColaKevin4(text1);
+            System.out.println("Cola4"+text1);
         
         Thread.sleep(tiempo *1000);  
         }

@@ -9,112 +9,85 @@ package Clases;
  * @author Kevin Hernandez
  * Fecha: 13/03/2023
  */
-public class QueueKevin <T> {
-    private QueueNodeKevin pFirst; 
-    private QueueNodeKevin pLast;
-    private int size; 
+public class QueueKevin {
+     int tamanio;
+    Nodo cabeza;
+    Nodo cola;
 
+    //Constructor
     public QueueKevin() {
-        this.pFirst = null;
-        this.pLast = null;
-        this.size =0;
+        this.cabeza = null;
+        this.cola = null;
+        this.tamanio = 0;
     }
-
-    public void enqueue (SerieKevin data){
-        QueueNodeKevin pAux = new QueueNodeKevin(data);
-        if (this.isEmpty()){
-            this.pFirst = pAux;
-            this.pLast = pAux;
+    
+    //Es vacio
+    public boolean isVacio() {
+        return this.tamanio == 0;
+    }
+    
+    //Obtener tamaño
+    public int getTamanio() {
+        return tamanio;
+    }
+    
+    //Insertar en la cola
+    public void insertar(SerieKevin c) {
+        Nodo n = new Nodo(c);
+        if (isVacio()) {
+            this.cabeza = n;
+            this.cola = n;
+            tamanio++;
         } else {
-            this.pLast.setpNext(pAux);
-            this.pLast = pAux;
-        }
-        this.size +=1; 
-    }
-    
-    public void dequeue () {
-        if (this.pFirst != null){
-            this.pFirst = this.pFirst.getpNext();
-            this.size --;
-        } else {
-            this.pLast = null;
-            this.size = 0;
+            cola.pSiguiente = n;
+            cola = n;
+            tamanio++;
         }
     }
     
-    public SerieKevin peek (){
-        return this.pFirst.getData();
-    }
-    
-     public String printQueue(){
-        QueueNodeKevin aux = this.pFirst;
-        String text="";
-         while (aux != null) {
-            SerieKevin temp = (SerieKevin) aux.getData();
-            text = text + "ID: " + temp.getId() + " - PRIORIDAD: " + temp.getPrioridad() + " - CONTADOR:" + temp.getContador() + "\n";
-            aux = aux.getpNext();
-        }
-        return text;
-    }
-    
-    public SerieKevin poll(){
-        QueueNodeKevin pAux = this.getpFirst();
-         if (this.pFirst != null){
-            this.pFirst = this.pFirst.getpNext();
-            this.size --;
-            return pAux.getData();
-        } else {
-            this.pLast = null;
+    //Extraer de la cola
+    public SerieKevin extraer() {
+        if(!isVacio()){
+            SerieKevin first = cabeza.data;
+            if(cabeza==cola){
+                cabeza=null;
+                cola=null;
+                tamanio--;
+            }else{
+                cabeza = cabeza.pSiguiente;
+                tamanio--;
+            }
+            return first;
+        }else{
             return null;
         }
     }
     
-    public boolean isEmpty(){
-        return this.pFirst == null & this.pLast == null;
-    }
-    /**
-     * @return the pFirst
-     */
-    public QueueNodeKevin getpFirst() {
-        return pFirst;
-    }
-
-    /**
-     * @param pFirst the pFirst to set
-     */
-    public void setpFirst(QueueNodeKevin pFirst) {
-        this.pFirst = pFirst;
-    }
-
-    /**
-     * @return the pLast
-     */
-    public QueueNodeKevin getpLast() {
-        return pLast;
-    }
-
-    /**
-     * @param pLast the pLast to set
-     */
-    public void setpLast(QueueNodeKevin pLast) {
-        this.pLast = pLast;
-    }
-
-    /**
-     * @return the size
-     */
-    public int getSize() {
-        return size;
-    }
-
-    /**
-     * @param size the size to set
-     */
-    public void setSize(int size) {
-        this.size = size;
+    //Transforma la cola a String
+    public String getData(){
+        Nodo h = this.cabeza;
+        String text="";
+         while (h != null) {
+            SerieKevin temp = h.data;
+            text = text + "ID: " + temp.id + " - PRIORIDAD: " + temp.prioridad + " - CONTADOR:" + temp.contador + "\n";
+            h = h.pSiguiente;
+        }
+        return text;
     }
     
+    public class Nodo {    
+    //Variables de Nodo
+        SerieKevin data;
+        Nodo pSiguiente;
+    //Constructor
+    public Nodo(SerieKevin c) {        
+        this.data = c;
+        this.pSiguiente = null;
     
-    
-    
+
+    }}
 }
+
+    
+    
+   
