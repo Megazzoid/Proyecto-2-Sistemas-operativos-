@@ -15,6 +15,7 @@ public class Proyecto2Operativos {
     static Administrador administrador;
     static Procesador procesador;
     static AdminDiego admin;
+    public static int tiempo = 1;
     /**
      * @param args the command line arguments
      */
@@ -27,6 +28,7 @@ public class Proyecto2Operativos {
         interfaz.setVisible(true);
         interfaz.setLocationRelativeTo(null);
         String text = "";
+        
         
         
         while (true) {
@@ -48,8 +50,8 @@ public class Proyecto2Operativos {
             text = admin.prio3.printCola();
             interfaz.setTextColaDiego3(text);
             
-            
-        Thread.sleep(2000);  
+        
+        Thread.sleep(tiempo *1000);  
         }
         
     }

@@ -5,6 +5,11 @@
  */
 package Interfaz;
 
+import Clases.Proyecto2Operativos;
+import static Clases.Proyecto2Operativos.main;
+import javax.swing.JOptionPane;
+
+
 /**
  *
  * @author kevin
@@ -58,6 +63,9 @@ public class Interfaz extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        CambiarTiempo = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -165,8 +173,43 @@ public class Interfaz extends javax.swing.JFrame {
         jLabel12.setText("COLA DE REFUERZO");
         getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 560, -1, -1));
 
+        jLabel13.setText("Cambiar Velocidad");
+        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 770, -1, -1));
+
+        CambiarTiempo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CambiarTiempoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(CambiarTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 770, 80, -1));
+
+        jButton1.setText("Cambiar!");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 770, -1, -1));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void CambiarTiempoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CambiarTiempoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CambiarTiempoActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+       try{
+            String answer = CambiarTiempo.getText();
+            int option = Integer.parseInt(answer);
+            Proyecto2Operativos.tiempo = option; 
+            
+       }catch (Exception e){
+            JOptionPane.showMessageDialog(null,"No es una opcion valida");
+            
+    }    
+    }//GEN-LAST:event_jButton1ActionPerformed
     
     public void setTextColaKevin1(String text){
         ColaKevin1.setText(text);
@@ -226,6 +269,7 @@ public class Interfaz extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField CambiarTiempo;
     private javax.swing.JTextArea ColaDiego1;
     private javax.swing.JTextArea ColaDiego2;
     private javax.swing.JTextArea ColaDiego3;
@@ -233,10 +277,12 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JTextArea ColaKevin2;
     private javax.swing.JTextArea ColaKevin3;
     private javax.swing.JTextArea ColaRefDiego;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
