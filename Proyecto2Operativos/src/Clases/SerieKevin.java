@@ -13,11 +13,27 @@ public class SerieKevin {
     int id;
     int prioridad;
     int contador;
+    String intro; 
+    String inicio; 
+    String cierre;
+    String creditos;
+    int totalcalidad;
+    String Nombrepersonaje;
+    String NombreEpisodio;
+    int tiempo;
 
-    public SerieKevin(int id, int prioridad, int contador) {
+    public SerieKevin(int id, int prioridad, int contador,String intro,String inicio, String cierre,String creditos, int totalcalidad,String Nombrepersonaje,String NombreEpisodio,int tiempo) {
         this.id = id;
         this.prioridad = prioridad;
         this.contador = contador;
+        this.inicio = inicio;
+        this.intro = intro;
+        this.cierre = cierre;
+        this.creditos = creditos;
+        this.totalcalidad = totalcalidad;
+        this.Nombrepersonaje = Nombrepersonaje;
+        this.NombreEpisodio = NombreEpisodio;
+        this.tiempo = tiempo;
     }
 
     /**
