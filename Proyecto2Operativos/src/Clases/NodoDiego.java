@@ -9,28 +9,28 @@ package Clases;
  *
  * @author danma
  */
-public class NodoDiego<T> {
-    private T data;
+public class NodoDiego {
+    private SerieDiego data;
     private NodoDiego next;
     
-    public NodoDiego (T datazo){
-        this.data = datazo;
+    public NodoDiego (SerieDiego data){
+        this.data = data;
         this.next = null;
     }
 
-    public  T getData() {
+    public  SerieDiego getData() {
         return data;
     }
 
-    public void setData(T data) {
+    public void setData(SerieDiego data) {
         this.data = data;
     }
 
-    public NodoDiego getNext() {
+    public NodoDiego getpNext() {
         return next;
     }
 
-    public void setNext(NodoDiego next) {
+    public void setpNext(NodoDiego next) {
         this.next = next;
     }
     
