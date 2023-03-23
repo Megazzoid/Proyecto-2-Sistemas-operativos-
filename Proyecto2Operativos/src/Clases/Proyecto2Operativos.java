@@ -14,7 +14,7 @@ public class Proyecto2Operativos {
 
     static Administrador administrador;
     static Procesador procesador;
-    
+    static AdminDiego admin;
     /**
      * @param args the command line arguments
      */
@@ -22,6 +22,7 @@ public class Proyecto2Operativos {
         // TODO code application logic here
         administrador = new Administrador();
         procesador = new Procesador();
+        admin = new AdminDiego();
         Interfaz  interfaz = new Interfaz();
         interfaz.setVisible(true);
         interfaz.setLocationRelativeTo(null);
@@ -38,6 +39,14 @@ public class Proyecto2Operativos {
             interfaz.setTextColaKevin3(text);
             administrador.aumentarContadorKevin(administrador.prioridad3, administrador.prioridad2);
             administrador.aumentarContadorKevin(administrador.prioridad2, administrador.prioridad1);
+                       
+            admin.SerieDiego();
+            text = admin.prio1.printCola();
+            interfaz.setTextColaDiego1(text);
+            text = admin.prio2.printCola();
+            interfaz.setTextColaDiego2(text);
+            text = admin.prio3.printCola();
+            interfaz.setTextColaDiego3(text);
             
             
         Thread.sleep(2000);  
