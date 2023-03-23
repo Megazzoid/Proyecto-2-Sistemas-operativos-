@@ -46,13 +46,13 @@ public class Interfaz extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jScrollPane5 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        ColaRefDiego = new javax.swing.JTextArea();
         jScrollPane6 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
+        ColaDiego1 = new javax.swing.JTextArea();
         jScrollPane7 = new javax.swing.JScrollPane();
-        jTextArea3 = new javax.swing.JTextArea();
+        ColaDiego2 = new javax.swing.JTextArea();
         jScrollPane8 = new javax.swing.JScrollPane();
-        jTextArea5 = new javax.swing.JTextArea();
+        ColaDiego3 = new javax.swing.JTextArea();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
@@ -117,31 +117,31 @@ public class Interfaz extends javax.swing.JFrame {
         jLabel6.setText("ESTUDIO 1");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 120, -1, -1));
 
-        jTextArea1.setEditable(false);
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane5.setViewportView(jTextArea1);
+        ColaRefDiego.setEditable(false);
+        ColaRefDiego.setColumns(20);
+        ColaRefDiego.setRows(5);
+        jScrollPane5.setViewportView(ColaRefDiego);
 
         getContentPane().add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 610, -1, 100));
 
-        jTextArea2.setEditable(false);
-        jTextArea2.setColumns(20);
-        jTextArea2.setRows(5);
-        jScrollPane6.setViewportView(jTextArea2);
+        ColaDiego1.setEditable(false);
+        ColaDiego1.setColumns(20);
+        ColaDiego1.setRows(5);
+        jScrollPane6.setViewportView(ColaDiego1);
 
         getContentPane().add(jScrollPane6, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 230, -1, 105));
 
-        jTextArea3.setEditable(false);
-        jTextArea3.setColumns(20);
-        jTextArea3.setRows(5);
-        jScrollPane7.setViewportView(jTextArea3);
+        ColaDiego2.setEditable(false);
+        ColaDiego2.setColumns(20);
+        ColaDiego2.setRows(5);
+        jScrollPane7.setViewportView(ColaDiego2);
 
         getContentPane().add(jScrollPane7, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 230, -1, 100));
 
-        jTextArea5.setEditable(false);
-        jTextArea5.setColumns(20);
-        jTextArea5.setRows(5);
-        jScrollPane8.setViewportView(jTextArea5);
+        ColaDiego3.setEditable(false);
+        ColaDiego3.setColumns(20);
+        ColaDiego3.setRows(5);
+        jScrollPane8.setViewportView(ColaDiego3);
 
         getContentPane().add(jScrollPane8, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 420, -1, 100));
 
@@ -177,6 +177,18 @@ public class Interfaz extends javax.swing.JFrame {
     }
     public void setTextColaKevin3(String text){
         ColaKevin3.setText(text);
+    }
+    
+    public void setTextColaDiego1(String text){
+        ColaDiego1.setText(text);
+    }
+    
+    public void setTextColaDiego2(String text){
+        ColaDiego2.setText(text);
+    }
+    
+    public void setTextColaDiego3(String text){
+        ColaDiego3.setText(text);
     }
     /**
      * @param args the command line arguments
@@ -214,9 +226,13 @@ public class Interfaz extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextArea ColaDiego1;
+    private javax.swing.JTextArea ColaDiego2;
+    private javax.swing.JTextArea ColaDiego3;
     private javax.swing.JTextArea ColaKevin1;
     private javax.swing.JTextArea ColaKevin2;
     private javax.swing.JTextArea ColaKevin3;
+    private javax.swing.JTextArea ColaRefDiego;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -237,10 +253,6 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextArea jTextArea2;
-    private javax.swing.JTextArea jTextArea3;
     private javax.swing.JTextArea jTextArea4;
-    private javax.swing.JTextArea jTextArea5;
     // End of variables declaration//GEN-END:variables
 }
