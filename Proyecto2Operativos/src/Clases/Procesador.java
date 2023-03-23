@@ -20,36 +20,43 @@ public class Procesador {
         
     }
 
-    public String RevisarSeries() {
+    public void RevisarSeries(QueueKevin QueueKevin1, QueueKevin QueueKevin2, QueueKevin QueueKevin3, QueueKevin QueueKevinRefuerzo,
+            ColaDiego ColaDiego1,ColaDiego ColaDiego2,ColaDiego ColaDiego3,ColaDiego ColaDiegoRefuerzo) {
 
         int prob = new Random().nextInt(100);
-        try {
-            //Esperar los 10 segundos
-            Thread.sleep(1000);
-            
-            
+     
             if (prob < 40) {
-            
-            Thread.sleep(100);    
-            //codigo de salir del mercado    
-                
+      
             } else if (prob >= 40 && prob <= 67) {
-             
-            Thread.sleep(100);    
                 
-            // Empatar 
-               
             } else {
             
-            //Enviar esfuerzo     
-            Thread.sleep(100);
-            }
+
+                    if(QueueKevin1.getpFirst() != null){
+                        SerieKevin temp = QueueKevin1.peek();
+                        QueueKevin1.dequeue();
+                        QueueKevinRefuerzo.enqueue(temp);
+
+                    }
+                    else if(QueueKevin2.getpFirst() != null){
+                        
+                        SerieKevin temp = QueueKevin2.peek();
+                        QueueKevin2.dequeue();
+                        QueueKevinRefuerzo.enqueue(temp);
+
+                    }else if(QueueKevin3.getpFirst() != null){
+                        SerieKevin temp = QueueKevin3.peek();
+                        QueueKevin3.dequeue();
+                        QueueKevinRefuerzo.enqueue(temp);
+                    }
+                    else{
+                        
+                    }
+            }  
             
-        } catch (InterruptedException ex) {
-            Logger.getLogger(Procesador.class.getName()).log(Level.SEVERE, null, ex);
-            return ex.toString();
         }
-        return null;
+        
+        
     }
 
-}
+

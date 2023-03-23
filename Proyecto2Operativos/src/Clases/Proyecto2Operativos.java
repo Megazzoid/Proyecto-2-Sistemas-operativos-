@@ -15,7 +15,7 @@ public class Proyecto2Operativos {
     static Administrador administrador;
     static Procesador procesador;
     static AdminDiego admin;
-    public static int tiempo = 1;
+    public static int tiempo = 4;
     /**
      * @param args the command line arguments
      */
@@ -29,7 +29,7 @@ public class Proyecto2Operativos {
         interfaz.setLocationRelativeTo(null);
         String text = "";
         
-        
+        Thread.sleep(3000);
         
         while (true) {
             administrador.crearSerieKevin();
@@ -50,6 +50,11 @@ public class Proyecto2Operativos {
             text = admin.prio3.printCola();
             interfaz.setTextColaDiego3(text);
             
+            procesador.RevisarSeries(administrador.prioridad1, administrador.prioridad2, administrador.prioridad3, administrador.refuerzo, 
+            admin.prio1, admin.prio2, admin.prio3, admin.prioRef);
+            text = administrador.refuerzo.printQueue();
+            interfaz.setTextColaKevin4(text);
+          
         
         Thread.sleep(tiempo *1000);  
         }

@@ -5,6 +5,9 @@
  */
 package Clases;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author kevin
@@ -49,11 +52,13 @@ public class Administrador {
     }
     
     public void aumentarContadorKevin(QueueKevin QueueKevin1, QueueKevin QueueKevin2){
-        if(!QueueKevin1.isEmpty()){
+        
+       
+            if(QueueKevin1.getpFirst() != null){
             for(int i=1; i < QueueKevin1.getSize(); i++){
                 SerieKevin temp = QueueKevin1.peek();
                 temp.setContador(temp.getContador()+1);
-                if(temp.getContador() == 8){
+                if(temp.getContador() >= 7){
                     temp.setContador(0);
                     temp.setPrioridad(temp.getPrioridad()-1);
                     QueueKevin1.dequeue();
@@ -64,10 +69,10 @@ public class Administrador {
                    
                 }
             }
-            QueueKevin1.getpFirst().getData().setContador(QueueKevin1.getpFirst().getData().getContador()+1);
-            
-            
+            QueueKevin1.getpFirst().getData().setContador(QueueKevin1.getpFirst().getData().getContador()+1);   
         }
+            
+   
     }
     
 }

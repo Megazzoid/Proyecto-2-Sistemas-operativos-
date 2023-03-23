@@ -47,7 +47,7 @@ public class Interfaz extends javax.swing.JFrame {
         jScrollPane3 = new javax.swing.JScrollPane();
         ColaKevin2 = new javax.swing.JTextArea();
         jScrollPane4 = new javax.swing.JScrollPane();
-        jTextArea4 = new javax.swing.JTextArea();
+        ColaRefuerzo = new javax.swing.JTextArea();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jScrollPane5 = new javax.swing.JScrollPane();
@@ -111,9 +111,9 @@ public class Interfaz extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 230, 209, 98));
 
-        jTextArea4.setColumns(20);
-        jTextArea4.setRows(5);
-        jScrollPane4.setViewportView(jTextArea4);
+        ColaRefuerzo.setColumns(20);
+        ColaRefuerzo.setRows(5);
+        jScrollPane4.setViewportView(ColaRefuerzo);
 
         getContentPane().add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 620, 209, 98));
 
@@ -174,14 +174,14 @@ public class Interfaz extends javax.swing.JFrame {
         getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 560, -1, -1));
 
         jLabel13.setText("Cambiar Velocidad");
-        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 770, -1, -1));
+        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 750, -1, -1));
 
         CambiarTiempo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CambiarTiempoActionPerformed(evt);
             }
         });
-        getContentPane().add(CambiarTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 770, 80, -1));
+        getContentPane().add(CambiarTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 750, 80, -1));
 
         jButton1.setText("Cambiar!");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -189,7 +189,7 @@ public class Interfaz extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 770, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 750, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -220,6 +220,9 @@ public class Interfaz extends javax.swing.JFrame {
     }
     public void setTextColaKevin3(String text){
         ColaKevin3.setText(text);
+    }
+     public void setTextColaKevin4(String text){
+        ColaRefuerzo.setText(text);
     }
     
     public void setTextColaDiego1(String text){
@@ -277,6 +280,7 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JTextArea ColaKevin2;
     private javax.swing.JTextArea ColaKevin3;
     private javax.swing.JTextArea ColaRefDiego;
+    private javax.swing.JTextArea ColaRefuerzo;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -299,6 +303,5 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
-    private javax.swing.JTextArea jTextArea4;
     // End of variables declaration//GEN-END:variables
 }
