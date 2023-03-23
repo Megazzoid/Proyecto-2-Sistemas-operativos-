@@ -26,7 +26,27 @@ public class Procesador {
      
             if (prob < 1) {
       
-            } else if (prob >= 33 && prob <= 67) {
+            } else if (prob >= 40 && prob <= 67) {
+                
+                if(!QueueKevin1.isVacio()){
+                        SerieKevin temp = QueueKevin1.extraer();      
+                        QueueKevin1.insertar(temp);
+
+                    }
+                    else if(!QueueKevin2.isVacio()){
+                        SerieKevin temp = QueueKevin2.extraer();  
+                        QueueKevin2.insertar(temp);
+
+
+                    }else if(!QueueKevin3.isVacio()){
+                        SerieKevin temp = QueueKevin3.extraer();
+                        QueueKevin3.insertar(temp);
+
+                       
+                    }
+                    else{
+                        System.out.println("No paso"); 
+                    }
                 
             } else {
                     if(!QueueKevin1.isVacio()){
@@ -65,6 +85,22 @@ public class Procesador {
             if (prob < 40) {
       
             } else if (prob >= 40 && prob <= 67) {
+                if(!ColaDiego1.isEmpty()){
+                        SerieDiego temp = ColaDiego1.Desencolar();
+                        ColaDiego1.Encolar(temp);
+
+                    }
+                    else if (!ColaDiego2.isEmpty()){
+                        SerieDiego temp = ColaDiego2.Desencolar();
+                        ColaDiego2.Encolar(temp);
+
+                    }else if(!ColaDiego3.isEmpty()){
+                        SerieDiego temp = ColaDiego3.Desencolar();
+                        ColaDiego3.Encolar(temp);               
+                    }
+                    else{
+                        System.out.println("No paso"); 
+                    }
                 
             } else {
                     if(!ColaDiego1.isEmpty()){

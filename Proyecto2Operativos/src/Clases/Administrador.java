@@ -28,6 +28,7 @@ public class Administrador {
     private int Idaux;
     Random rand = new Random();
     int contador = 0;
+    int contadoradicinal = 0;
     String inicio;
     String intro;
     String creditos;
@@ -40,6 +41,10 @@ public class Administrador {
                 "Televisión Interdimensional", "Cosas Necesarias", "Encuentros Cercanos a lo Rick", "Es Hora de la Fiesta",
                 "Rupturas en el Tiempo", "Morty Escapa de Noche", "Asimilación Autoerótica", "Rick, Vengador del Futuro",
                 "Ponte Ricoso", "Los Ricks Deben Estar Locos", "Problemas con Mini-Rick");
+    
+    List<String> valores = Arrays.asList("Rick Sanchez", "Rick Primer", "Morty Smith", "Beth Smith", "Meeseks", "SrPAntalones de popo",
+            "Summer Smith", "Jessica", "Beta7", "Coleccionista de especies", "Pedo", "Nancy", "Mujer Pajaro", "Rick Simple", "Lady Katana", "Rick Malvado");
+
     
      public Administrador() {
         this.prioridad1 = new QueueKevin();
@@ -54,6 +59,11 @@ public class Administrador {
         contador = 0;
         int indice = rand.nextInt(episodios.size());
         String episodio = episodios.get(indice);
+        
+        int personajes = rand.nextInt(valores.size());
+        
+        String personaje = valores.get(personajes);
+        
         
         boolean boolinicio = rand.nextBoolean();
         
@@ -105,7 +115,7 @@ public class Administrador {
            
            int numeroAleatorio = random.nextInt(60) + 1;
             
-           SerieKevin SerieEstudio1 = new SerieKevin(this.Idaux,3,0,intro, inicio,cierre,creditos,contador,episodio,episodio,numeroAleatorio);
+           SerieKevin SerieEstudio1 = new SerieKevin(this.Idaux,3,0,intro, inicio,cierre,creditos,contador,episodio,personaje,numeroAleatorio);
            this.prioridad3.insertar(SerieEstudio1); 
             
             
@@ -114,14 +124,14 @@ public class Administrador {
             
             int numeroAleatorio = random.nextInt(30) + 60;
            
-            SerieKevin SerieEstudio1 = new SerieKevin(this.Idaux,2,0,intro, inicio,cierre,creditos,contador,episodio,episodio,numeroAleatorio);
+            SerieKevin SerieEstudio1 = new SerieKevin(this.Idaux,2,0,intro, inicio,cierre,creditos,contador,episodio,personaje,numeroAleatorio);
             this.prioridad2.insertar(SerieEstudio1); 
             
             
         }else{
             
             int numeroAleatorio = random.nextInt(31) + 90;
-            SerieKevin SerieEstudio1 = new SerieKevin(this.Idaux,1,0,intro, inicio,cierre,creditos,contador,episodio,episodio,numeroAleatorio);   
+            SerieKevin SerieEstudio1 = new SerieKevin(this.Idaux,1,0,intro, inicio,cierre,creditos,contador,episodio,personaje,numeroAleatorio);   
             this.prioridad1.insertar(SerieEstudio1); 
             
         }
