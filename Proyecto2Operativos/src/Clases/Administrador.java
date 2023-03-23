@@ -125,8 +125,9 @@ public class Administrador {
             this.prioridad1.insertar(SerieEstudio1); 
             
         }
-     
- 
+        
+        this.Idaux++;
+        
         return "";     
     }
      
@@ -157,6 +158,37 @@ public class Administrador {
             
    
     }
+    
+        public void SalirRefuerzoKevin(){
+        
+        int numeroAleatorio = random.nextInt(100);   
+        
+        if(numeroAleatorio<=40){
+            
+            if(!this.refuerzo.isVacio()){
+            
+                SerieKevin temp = this.refuerzo.extraer();
+                temp.inicio = "Calidad";
+                temp.intro = "Calidad";
+                temp.cierre = "Calidad";
+                temp.creditos = "Calidad";
+                
+                if(temp.prioridad == 1){
+                    prioridad1.insertar(temp);
+
+                }else if(temp.prioridad == 2){
+                    prioridad2.insertar(temp);
+                }else{
+                    prioridad3.insertar(temp);
+                }
+              
+        }
+            
+        }else{
+            System.out.println("Se quedo");
+        }
+    }
+    
     
 }
 

@@ -33,7 +33,7 @@ public class Proyecto2Operativos {
         
         while (true) {
             
-            
+            administrador.SalirRefuerzoKevin();
             administrador.aumentarContadorKevin(administrador.prioridad3, administrador.prioridad2);
             administrador.aumentarContadorKevin(administrador.prioridad2, administrador.prioridad1);
             
@@ -70,7 +70,7 @@ public class Proyecto2Operativos {
             interfaz.setTextColaKevin4(text1);
             System.out.println("Cola4"+text1);
         
-        Thread.sleep(100);  
+        Thread.sleep(tiempo*1000);  
         }
         
     }
