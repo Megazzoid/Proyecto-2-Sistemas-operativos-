@@ -10,9 +10,9 @@ package Clases;
  * @author danma
  */
 public class SerieDiego {
-    private int id;
-    private int prio;
-    private int contador;
+    int id;
+    int prio;
+    int contador;
 
     public SerieDiego(int id, int prio, int contador) {
         this.id = id;
