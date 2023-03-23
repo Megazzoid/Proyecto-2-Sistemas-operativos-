@@ -64,37 +64,36 @@ public class Administrador {
         
         String personaje = valores.get(personajes);
         
-        
-        boolean boolinicio = rand.nextBoolean();
-        
-        if (boolinicio == true){
+        int intinicio = new Random().nextInt(100);
+                
+        if (intinicio > 84){
             inicio = "Calidad";
             contador = contador + 1;
         }else{
             inicio = "No Calidad";
         }
         
-        boolean boolintro = rand.nextBoolean();
+        int intintro = new Random().nextInt(100);
         
-        if (boolintro == true){
+        if (intintro > 75){
             intro = "Calidad";
             contador = contador + 1;
         }else{
             intro = "No Calidad";
         }
         
-        boolean boolcierre = rand.nextBoolean();
+        int intcierre = new Random().nextInt(100);
         
-        if (boolcierre == true){
+        if (intcierre > 80){
             cierre = "Calidad";
             contador = contador + 1;
         }else{
             cierre = "No Calidad";
         }
         
-        boolean boolcreditos = rand.nextBoolean();
+        int intcreditos = new Random().nextInt(100);
         
-        if (boolcreditos == true){
+        if (intcreditos > 85){
             creditos = "Calidad";
             contador = contador + 1;
         }else{
@@ -104,12 +103,7 @@ public class Administrador {
          
         
       //  SerieKevin SerieEstudio1 = new SerieKevin(this.Idaux, prioridad, 0);
-        
-        System.out.println(contador);
-        System.out.println(boolcreditos);
-        System.out.println(boolcierre);
-        System.out.println(boolintro);
-        System.out.println(boolinicio);
+      
         
         if( contador  == 0){
            
@@ -146,6 +140,105 @@ public class Administrador {
         return texto;
     }
     
+    
+    
+    public void cicloRevision(){
+        if(contadoradicinal == 2){
+            
+            
+            int intrevision = new Random().nextInt(100);
+            if (intrevision < 70){
+
+                                contador = 0;
+                        int indice = rand.nextInt(episodios.size());
+                        String episodio = episodios.get(indice);
+
+                        int personajes = rand.nextInt(valores.size());
+
+                        String personaje = valores.get(personajes);
+
+
+                        int intinicio = new Random().nextInt(100);
+
+                        if (intinicio > 84){
+                            inicio = "Calidad";
+                            contador = contador + 1;
+                        }else{
+                            inicio = "No Calidad";
+                        }
+
+                        int intintro = new Random().nextInt(100);
+
+                        if (intintro > 75){
+                            intro = "Calidad";
+                            contador = contador + 1;
+                        }else{
+                            intro = "No Calidad";
+                        }
+
+                        int intcierre = new Random().nextInt(100);
+
+                        if (intcierre > 80){
+                            cierre = "Calidad";
+                            contador = contador + 1;
+                        }else{
+                            cierre = "No Calidad";
+                        }
+
+                        int intcreditos = new Random().nextInt(100);
+
+                        if (intcreditos > 85){
+                            creditos = "Calidad";
+                            contador = contador + 1;
+                        }else{
+                            creditos = "No Calidad";
+                        }
+
+
+
+                      //  SerieKevin SerieEstudio1 = new SerieKevin(this.Idaux, prioridad, 0);
+
+
+                        if( contador  == 0){
+
+                           int numeroAleatorio = random.nextInt(60) + 1;
+
+                           SerieKevin SerieEstudio1 = new SerieKevin(this.Idaux,3,0,intro, inicio,cierre,creditos,contador,episodio,personaje,numeroAleatorio);
+                           this.prioridad3.insertar(SerieEstudio1); 
+
+
+
+                        }else if(contador > 0 && contador < 3){
+
+                            int numeroAleatorio = random.nextInt(30) + 60;
+
+                            SerieKevin SerieEstudio1 = new SerieKevin(this.Idaux,2,0,intro, inicio,cierre,creditos,contador,episodio,personaje,numeroAleatorio);
+                            this.prioridad2.insertar(SerieEstudio1); 
+
+
+                        }else{
+
+                            int numeroAleatorio = random.nextInt(31) + 90;
+                            SerieKevin SerieEstudio1 = new SerieKevin(this.Idaux,1,0,intro, inicio,cierre,creditos,contador,episodio,personaje,numeroAleatorio);   
+                            this.prioridad1.insertar(SerieEstudio1); 
+
+                        }
+
+                        this.Idaux++; 
+                        contadoradicinal  = 0;
+
+            }else{
+                
+                contadoradicinal = 2;
+            }
+
+        }
+        else{
+            contadoradicinal++;
+        }
+        
+    }
+    
     public void aumentarContadorKevin(QueueKevin QueueKevin1, QueueKevin QueueKevin2){
         
        
@@ -165,8 +258,8 @@ public class Administrador {
             }
               
         }
-            
-   
+     
+         
     }
     
         public void SalirRefuerzoKevin(){
@@ -183,15 +276,10 @@ public class Administrador {
                 temp.cierre = "Calidad";
                 temp.creditos = "Calidad";
                 
-                if(temp.prioridad == 1){
+          
                     prioridad1.insertar(temp);
 
-                }else if(temp.prioridad == 2){
-                    prioridad2.insertar(temp);
-                }else{
-                    prioridad3.insertar(temp);
-                }
-              
+  
         }
             
         }else{
