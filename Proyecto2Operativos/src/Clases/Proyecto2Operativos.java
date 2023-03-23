@@ -15,7 +15,7 @@ public class Proyecto2Operativos {
     static Administrador administrador;
     static Procesador procesador;
     static AdminDiego admin;
-    public static int tiempo = 4;
+    public static int tiempo = 10;
     /**
      * @param args the command line arguments
      */
