@@ -8,6 +8,7 @@ package Clases;
 /**
  *
  * @author danma
+ * @param <T>
  */
 public class ColaDiego<T> {
     
@@ -20,7 +21,7 @@ public class ColaDiego<T> {
         this.size = 0;
     }
     
-    public ColaDiego(T datazo){
+    public ColaDiego(SerieDiego datazo){
         NodoDiego<T> nodo = new NodoDiego(datazo);
         this.head = this.tail = nodo;
         this.size = 1;
@@ -50,6 +51,17 @@ public class ColaDiego<T> {
         temp.setNext(null);
         this.size--;
         return temp.getData();
+    }
+    
+    public String printCola(){
+        NodoDiego<T> aux = this.head;
+        String text="";
+         while (aux != null) {
+            SerieDiego temp = (SerieDiego) aux.getData();
+            text = text + "ID: " + temp.getId() + " - PRIORIDAD: " + temp.getPrio() + " - CONTADOR:" + temp.getContador() + "\n";
+            aux = aux.getNext();
+        }
+        return text;
     }
     
     public T peek(){
