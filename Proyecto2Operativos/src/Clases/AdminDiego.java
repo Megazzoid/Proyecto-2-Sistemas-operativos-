@@ -28,23 +28,27 @@ public class AdminDiego {
         int prio = (int)(Math.random()*3 +1);
         SerieDiego SerieEstudio2 = new SerieDiego (this.ID, prio,0);
         this.ID++;
+        
         switch(SerieEstudio2.getPrio()){
             case 1:
-                this.prio1.EncolarDiego(SerieEstudio2);
+                this.prio1.Encolar(SerieEstudio2);
                 return "Se ha agregado una serie al estudio 2 " + SerieEstudio2.getId() + "- Prioridad: " + prio;
             case 2:
-                this.prio2.EncolarDiego(SerieEstudio2);
+                this.prio2.Encolar(SerieEstudio2);
                 return "Se ha agregado una serie al estudio 2 " + SerieEstudio2.getId() + "- Prioridad: " + prio;
             case 3:
-                this.prio3.EncolarDiego(SerieEstudio2);
+                this.prio3.Encolar(SerieEstudio2);
                 return "Se ha agregado una serie al estudio 2 " + SerieEstudio2.getId() + "- Prioridad: " + prio;
         }
         return "";
     }
     
     public String MandarInfoDiego(ColaDiego cola){
-        String text = cola.printCola();
+        String text = cola.getData();
         return text;
     }
+
+        
+
     
 }
