@@ -20,8 +20,7 @@ public class Procesador {
         
     }
 
-    public void RevisarSeries(QueueKevin QueueKevin1, QueueKevin QueueKevin2, QueueKevin QueueKevin3, QueueKevin QueueKevinRefuerzo,
-            ColaDiego ColaDiego1,ColaDiego ColaDiego2,ColaDiego ColaDiego3,ColaDiego ColaDiegoRefuerzo) {
+    public void RevisarSeries(QueueKevin QueueKevin1, QueueKevin QueueKevin2, QueueKevin QueueKevin3, QueueKevin QueueKevinRefuerzo) {
 
         int prob = new Random().nextInt(100);
      
@@ -58,6 +57,43 @@ public class Procesador {
             }  
             
         }
+    
+    public void RevisarDiego(ColaDiego ColaDiego1,ColaDiego ColaDiego2,ColaDiego ColaDiego3,ColaDiego ColaDiegoRefuerzo){
+        
+        int prob = new Random().nextInt(100);
+     
+            if (prob < 40) {
+      
+            } else if (prob >= 40 && prob <= 67) {
+                
+            } else {
+                    if(!ColaDiego1.isEmpty()){
+                        SerieDiego temp = ColaDiego1.Desencolar();
+                        temp.prio = 4;
+                        
+                        ColaDiegoRefuerzo.Encolar(temp);
+
+                    }
+                    else if (!ColaDiego2.isEmpty()){
+                        SerieDiego temp = ColaDiego2.Desencolar();
+                        temp.prio = 4;
+                        
+                        ColaDiegoRefuerzo.Encolar(temp);
+
+
+                    }else if(!ColaDiego3.isEmpty()){
+                        SerieDiego temp = ColaDiego3.Desencolar();
+                        temp.prio = 4;
+                        
+                        ColaDiegoRefuerzo.Encolar(temp);
+
+                       
+                    }
+                    else{
+                        System.out.println("No paso"); 
+                    }
+            } 
+    }
         
         
     }
