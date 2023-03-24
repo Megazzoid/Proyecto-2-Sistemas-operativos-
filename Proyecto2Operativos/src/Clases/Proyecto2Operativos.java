@@ -36,10 +36,9 @@ public class Proyecto2Operativos {
            texto = "Actualizando colas...";
            int contador = 0;
            contador = contador + 1;
-           interfaz.setTextColaDiegoAI(Integer.toString(contador));
-           interfaz.setTextColaDiegoAdmin(texto);
-            Thread.sleep(3000);
-            texto1 = "-------------------------------";
+           
+           
+    
 
             
             administrador.SalirRefuerzoKevin();
@@ -50,7 +49,7 @@ public class Proyecto2Operativos {
             admin.aumentarContadorDiego(admin.prio3, admin.prio2);
             admin.aumentarContadorDiego(admin.prio2, admin.prio1);
             
-            procesador.RevisarSeries(administrador.prioridad1, administrador.prioridad2, administrador.prioridad3, administrador.refuerzo,admin.prio1,admin.prio2,admin.prio3,admin.prioRef);
+            procesador.RevisarSeries(administrador.prioridad1, administrador.prioridad2, administrador.prioridad3, administrador.refuerzo,admin.prio1,admin.prio2,admin.prio3,admin.prioRef,interfaz);
                        
             admin.SerieDiego();
             
@@ -81,7 +80,7 @@ public class Proyecto2Operativos {
             
             
             
-            interfaz.setTextColaDiegoAdmin(texto1);
+    
         
         Thread.sleep(tiempo*1000);  
         }

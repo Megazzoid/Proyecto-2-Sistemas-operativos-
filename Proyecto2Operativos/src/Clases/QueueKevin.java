@@ -69,7 +69,7 @@ public class QueueKevin {
         String text="";
          while (h != null) {
             SerieKevin temp = h.data;
-            text = text + "ID: " + temp.id + " - PRIORIDAD: " + temp.prioridad + " - CONTADOR:" + temp.contador + " - DURACIOPM "+temp.tiempo+"MINUTOS" +"\n";
+            text = text + "ID: " + temp.id + " - PRIORIDAD: " + temp.prioridad + " - CONTADOR:" + temp.contador + " - DURACION "+temp.tiempo+" MINUTOS" +"\n";
             h = h.pSiguiente;
         }
         return text;

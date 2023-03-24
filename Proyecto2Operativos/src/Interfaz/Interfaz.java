@@ -70,11 +70,11 @@ public class Interfaz extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         jScrollPane9 = new javax.swing.JScrollPane();
         ColaRefDiego = new javax.swing.JTextArea();
-        textoAdmin = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
         textoAI = new javax.swing.JTextField();
-        jLabel17 = new javax.swing.JLabel();
         CombateVentana = new javax.swing.JButton();
+        jLabel18 = new javax.swing.JLabel();
+        textoAI2 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -211,19 +211,9 @@ public class Interfaz extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane9, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 410, 250, 130));
 
-        textoAdmin.setEditable(false);
-        textoAdmin.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        textoAdmin.setText("Esperando");
-        textoAdmin.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textoAdminActionPerformed(evt);
-            }
-        });
-        getContentPane().add(textoAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 640, 180, 40));
-
         jLabel16.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel16.setText("AI revisando ID: ");
-        getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 570, -1, -1));
+        getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 560, -1, -1));
 
         textoAI.setEditable(false);
         textoAI.addActionListener(new java.awt.event.ActionListener() {
@@ -231,11 +221,7 @@ public class Interfaz extends javax.swing.JFrame {
                 textoAIActionPerformed(evt);
             }
         });
-        getContentPane().add(textoAI, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 570, 60, 40));
-
-        jLabel17.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel17.setText("Administrador:");
-        getContentPane().add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 650, -1, -1));
+        getContentPane().add(textoAI, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 550, 60, 40));
 
         CombateVentana.setText("Pelea!");
         CombateVentana.addActionListener(new java.awt.event.ActionListener() {
@@ -244,6 +230,18 @@ public class Interfaz extends javax.swing.JFrame {
             }
         });
         getContentPane().add(CombateVentana, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 732, 80, 30));
+
+        jLabel18.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel18.setText("AI revisando ID: ");
+        getContentPane().add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 570, -1, -1));
+
+        textoAI2.setEditable(false);
+        textoAI2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textoAI2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(textoAI2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 570, 60, 40));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -265,10 +263,6 @@ public class Interfaz extends javax.swing.JFrame {
     }    
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void textoAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textoAdminActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textoAdminActionPerformed
-
     private void textoAIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textoAIActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_textoAIActionPerformed
@@ -277,6 +271,10 @@ public class Interfaz extends javax.swing.JFrame {
         Combate newframe = new Combate();
         newframe.setVisible(true);
     }//GEN-LAST:event_CombateVentanaActionPerformed
+
+    private void textoAI2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textoAI2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textoAI2ActionPerformed
     
     public void setTextColaKevin1(String text){
         ColaKevin1.setText(text);
@@ -307,11 +305,11 @@ public class Interfaz extends javax.swing.JFrame {
     public void setTextColaDiego4(String text){
         ColaRefDiego.setText(text);
     }
-    public void setTextColaDiegoAdmin(String text){
-        textoAdmin.setText(text);
+    public void setidDiego(String text){
+       textoAI2.setText(text);
     }
     
-       public void setTextColaDiegoAI(String text){
+       public void setidKevin(String text){
         textoAI.setText(text);
 
     }
@@ -370,7 +368,7 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -388,6 +386,6 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JTextField textoAI;
-    private javax.swing.JTextField textoAdmin;
+    private javax.swing.JTextField textoAI2;
     // End of variables declaration//GEN-END:variables
 }
