@@ -25,6 +25,7 @@ public class Administrador {
     QueueKevin prioridad2;
     QueueKevin prioridad3;
     QueueKevin refuerzo;
+    QueueKevin pelea;
     private int Idaux;
     Random rand = new Random();
     int contador = 0;
@@ -51,6 +52,7 @@ public class Administrador {
         this.prioridad2 = new QueueKevin();
         this.prioridad3 = new QueueKevin();
         this.refuerzo = new QueueKevin();
+        this.pelea = new QueueKevin();
         this.Idaux = 1;
     }
     
@@ -281,6 +283,18 @@ public class Administrador {
 
   
         }
+            
+        }else{
+            System.out.println("Se quedo");
+        }
+    }
+        
+        public void EntrarPeleaKevin(){
+        
+            if(!this.pelea.isVacio()){
+            
+                SerieKevin temp = this.prioridad1.extraer();
+                pelea.insertar(temp);
             
         }else{
             System.out.println("Se quedo");
