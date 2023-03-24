@@ -96,7 +96,6 @@ public class AdminDiego {
         if (contador == 0){
             int numeroAleatorio = random.nextInt(60)+1;
             SerieDiego SerieEstudio2 = new SerieDiego (this.ID, 3,0, intro, inicio,cierre,creditos,contador,episodio,personaje,numeroAleatorio);
-
             this.prio3.Encolar(SerieEstudio2);
         } else if (contador > 0 && contador < 3){
             int numeroAleatorio = random.nextInt(30)+60;
