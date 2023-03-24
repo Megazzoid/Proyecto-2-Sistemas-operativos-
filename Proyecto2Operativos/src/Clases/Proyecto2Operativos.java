@@ -42,13 +42,11 @@ public class Proyecto2Operativos {
            
     
 
-            administrador.EntrarPeleaKevin();
+
             administrador.SalirRefuerzoKevin();
             administrador.aumentarContadorKevin(administrador.prioridad3, administrador.prioridad2);
             administrador.aumentarContadorKevin(administrador.prioridad2, administrador.prioridad1);
             
-            admin.SalirRefuerzoDiego();
-            admin.EntrarPeleaDiego();
             admin.aumentarContadorDiego(admin.prio3, admin.prio2);
             admin.aumentarContadorDiego(admin.prio2, admin.prio1);
             
@@ -64,8 +62,7 @@ public class Proyecto2Operativos {
             interfaz.setTextColaDiego3(text3D);
             text4D = admin.prioRef.getData();
             interfaz.setTextColaDiego4(text4D);
-            text5D = admin.prioPelea.getData();
-            interfaz.setTextColaDiegoPelea(text5D);
+            
             
             
             administrador.crearSerieKevin();
@@ -82,8 +79,7 @@ public class Proyecto2Operativos {
             text1 = administrador.refuerzo.getData();
             interfaz.setTextColaKevin4(text1);
             System.out.println("Cola4"+text1);
-            textp = administrador.pelea.getData();
-            interfaz.setTextColaKevinPelea(text1);
+            
             
             
             

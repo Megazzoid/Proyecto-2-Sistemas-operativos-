@@ -75,6 +75,17 @@ public class QueueKevin {
         return text;
     }
     
+    public String getData2(){
+        Nodo h = this.cabeza;
+        String text="";
+         while (h != null) {
+            SerieKevin temp = h.data;
+            text = text + "ID: " + temp.id + "Nombre del episodio:" + temp.NombreEpisodio  +"\n" + "Nombre del personaje" + temp.Nombrepersonaje +"\n" + " - PRIORIDAD: " + temp.prioridad + " - CONTADOR:" + temp.contador + " - DURACION "+temp.tiempo+" MINUTOS" +"\n";
+            h = h.pSiguiente;
+        }
+        return text;
+    }
+    
     public class Nodo {    
     //Variables de Nodo
         SerieKevin data;
