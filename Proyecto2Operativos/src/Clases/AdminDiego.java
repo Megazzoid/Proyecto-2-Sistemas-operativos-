@@ -112,8 +112,89 @@ public class AdminDiego {
         this.ID++;
         return "";
         
-       
     }
+    
+        public void cicloRevisionDiego(){
+        if(contadoradicinal == 2){
+            
+            
+            int intrevision = new Random().nextInt(100);
+            if (intrevision < 70){
+
+                 contador = 0;
+                 int indice = rand.nextInt(episodios.size());
+                 String episodio = episodios.get(indice);
+
+                 int personajes = rand.nextInt(valores.size());
+
+                 String personaje = valores.get(personajes);
+
+
+                 int interveninicio = new Random().nextInt(100);
+
+                        if (interveninicio > 84){
+                            inicio = "Calidad";
+                            contador = contador + 1;
+                        }else{
+                            inicio = "No Calidad";
+                        }
+
+                        int intervenintro = new Random().nextInt(100);
+
+                        if (intervenintro > 75){
+                            intro = "Calidad";
+                            contador = contador + 1;
+                        }else{
+                            intro = "No Calidad";
+                        }
+
+                        int intervencierre = new Random().nextInt(100);
+
+                        if (intervencierre > 80){
+                            cierre = "Calidad";
+                            contador = contador + 1;
+                        }else{
+                            cierre = "No Calidad";
+                        }
+
+                        int intervencreditos = new Random().nextInt(100);
+
+                        if (intervencreditos > 85){
+                            creditos = "Calidad";
+                            contador = contador + 1;
+                        }else{
+                            creditos = "No Calidad";
+                        }
+
+                               if (contador == 0){
+                               int numeroAleatorio = random.nextInt(60)+1;
+                               SerieDiego SerieEstudio2 = new SerieDiego (this.ID, 3,0, intro, inicio,cierre,creditos,contador,episodio,personaje,numeroAleatorio);
+                               this.prio3.Encolar(SerieEstudio2);
+                               } else if (contador > 0 && contador < 3){
+                               int numeroAleatorio = random.nextInt(30)+60;
+                               SerieDiego SerieEstudio2 = new SerieDiego (this.ID, 2,0, intro, inicio,cierre,creditos,contador,episodio,personaje,numeroAleatorio);
+                               this.prio2.Encolar(SerieEstudio2);
+                               } else {
+                               int numeroAleatorio = random.nextInt(31)+90;
+                               SerieDiego SerieEstudio2 = new SerieDiego (this.ID, 1,0, intro, inicio,cierre,creditos,contador,episodio,personaje,numeroAleatorio);
+                               this.prio1.Encolar(SerieEstudio2);
+                                }
+
+                        this.ID++; 
+                        contadoradicinal  = 0;
+
+            }else{
+                
+                contadoradicinal = 2;
+            }
+
+        }
+        else{
+            contadoradicinal++;
+        }
+        
+    }
+    
     
     public String MandarInfoDiego(ColaDiego cola){
         String text = cola.getData();
