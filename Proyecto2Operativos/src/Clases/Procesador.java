@@ -42,8 +42,12 @@ public class Procesador {
                     }else if(!QueueKevin3.isVacio()){
                         SerieKevin temp = QueueKevin3.extraer();
                         QueueKevin3.insertar(temp);    
-                    } 
-                    else if(!ColaDiego1.isEmpty()){
+                    }
+                else{
+                        System.out.println("No paso"); 
+                    }
+                
+            if(!ColaDiego1.isEmpty()){
                         SerieDiego temp = ColaDiego1.Desencolar();
                         ColaDiego1.Encolar(temp);
 
@@ -81,8 +85,13 @@ public class Procesador {
                         temp.prioridad = 4;
                         
                         QueueKevinRefuerzo.insertar(temp);
+                        
+                        
+                    }else{
+                        System.out.println("No paso"); 
+                    }    
  
-                    } else if(!ColaDiego1.isEmpty()){
+                   if(!ColaDiego1.isEmpty()){
                         SerieDiego temp = ColaDiego1.Desencolar();
                         temp.prio = 4;
                         ColaDiegoRefuerzo.Encolar(temp);
@@ -98,10 +107,11 @@ public class Procesador {
                         
                         ColaDiegoRefuerzo.Encolar(temp);
                     }
-                        
-                    else{
+                   else{
                         System.out.println("No paso"); 
-                    }
+                    }  
+                        
+                    
             }  
             
         }
