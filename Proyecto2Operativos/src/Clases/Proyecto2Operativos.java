@@ -4,6 +4,7 @@
  */
 package Clases;
 
+import Interfaz.Combate;
 import Interfaz.Interfaz;
 
 /**
@@ -26,30 +27,32 @@ public class Proyecto2Operativos {
         procesador = new Procesador();
         admin = new AdminDiego();
         Interfaz  interfaz = new Interfaz();
+        Combate combate = new Combate();
         interfaz.setVisible(true);
         interfaz.setLocationRelativeTo(null);
-        String text1, text2, text3, text4, text1D, text2D, text3D, text4D, texto, texto1 = "";
+        String text1, text2, text3, text4, textp, text1D, text2D, text3D, text4D, text5D, texto, text = "";
         
 
         
         while (true) {
            texto = "Actualizando colas...";
-           int contador = 0;
-           contador = contador + 1;
+           Thread.sleep(1000); 
+
            
            
     
 
-            
+            administrador.EntrarPeleaKevin();
             administrador.SalirRefuerzoKevin();
             administrador.aumentarContadorKevin(administrador.prioridad3, administrador.prioridad2);
             administrador.aumentarContadorKevin(administrador.prioridad2, administrador.prioridad1);
             
             admin.SalirRefuerzoDiego();
+            admin.EntrarPeleaDiego();
             admin.aumentarContadorDiego(admin.prio3, admin.prio2);
             admin.aumentarContadorDiego(admin.prio2, admin.prio1);
             
-            procesador.RevisarSeries(administrador.prioridad1, administrador.prioridad2, administrador.prioridad3, administrador.refuerzo,admin.prio1,admin.prio2,admin.prio3,admin.prioRef,interfaz);
+            procesador.RevisarSeries(administrador.prioridad1, administrador.prioridad2, administrador.prioridad3, administrador.refuerzo, administrador.pelea, admin.prio1,admin.prio2,admin.prio3,admin.prioRef,admin.prioPelea, interfaz, combate);
                        
             admin.SerieDiego();
             
@@ -61,6 +64,8 @@ public class Proyecto2Operativos {
             interfaz.setTextColaDiego3(text3D);
             text4D = admin.prioRef.getData();
             interfaz.setTextColaDiego4(text4D);
+            text5D = admin.prioPelea.getData();
+            interfaz.setTextColaDiegoPelea(text5D);
             
             
             administrador.crearSerieKevin();
@@ -77,12 +82,14 @@ public class Proyecto2Operativos {
             text1 = administrador.refuerzo.getData();
             interfaz.setTextColaKevin4(text1);
             System.out.println("Cola4"+text1);
+            textp = administrador.pelea.getData();
+            interfaz.setTextColaKevinPelea(text1);
             
             
             
     
         
-        Thread.sleep(tiempo*1000);  
+        Thread.sleep(300);  
         }
         
     }
