@@ -50,9 +50,7 @@ public class Proyecto2Operativos {
             admin.aumentarContadorDiego(admin.prio3, admin.prio2);
             admin.aumentarContadorDiego(admin.prio2, admin.prio1);
             
-            procesador.RevisarSeries(administrador.prioridad1, administrador.prioridad2, administrador.prioridad3, administrador.refuerzo);
-            
-            procesador.RevisarDiego(admin.prio1,admin.prio2,admin.prio3,admin.prioRef);
+            procesador.RevisarSeries(administrador.prioridad1, administrador.prioridad2, administrador.prioridad3, administrador.refuerzo,admin.prio1,admin.prio2,admin.prio3,admin.prioRef);
                        
             admin.SerieDiego();
             
