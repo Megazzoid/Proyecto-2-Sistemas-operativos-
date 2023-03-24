@@ -111,7 +111,7 @@ public class Administrador {
            
            int numeroAleatorio = random.nextInt(60) + 1;
             
-           SerieKevin SerieEstudio1 = new SerieKevin(this.Idaux,3,0,intro, inicio,cierre,creditos,contador,episodio,personaje,numeroAleatorio);
+           SerieKevin SerieEstudio1 = new SerieKevin(this.Idaux,3,0,intro, inicio,cierre,creditos,contador,personaje,episodio,numeroAleatorio);
            this.prioridad3.insertar(SerieEstudio1); 
             
             
@@ -120,14 +120,14 @@ public class Administrador {
             
             int numeroAleatorio = random.nextInt(30) + 60;
            
-            SerieKevin SerieEstudio1 = new SerieKevin(this.Idaux,2,0,intro, inicio,cierre,creditos,contador,episodio,personaje,numeroAleatorio);
+            SerieKevin SerieEstudio1 = new SerieKevin(this.Idaux,2,0,intro, inicio,cierre,creditos,contador,personaje,episodio,numeroAleatorio);
             this.prioridad2.insertar(SerieEstudio1); 
             
             
         }else{
             
             int numeroAleatorio = random.nextInt(31) + 90;
-            SerieKevin SerieEstudio1 = new SerieKevin(this.Idaux,1,0,intro, inicio,cierre,creditos,contador,episodio,personaje,numeroAleatorio);   
+            SerieKevin SerieEstudio1 = new SerieKevin(this.Idaux,1,0,intro, inicio,cierre,creditos,contador,personaje,episodio,numeroAleatorio);   
             this.prioridad1.insertar(SerieEstudio1); 
             
         }

@@ -61,10 +61,9 @@ public class Interfaz extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
-        CambiarTiempo = new javax.swing.JTextField();
+        Ganador = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
@@ -72,11 +71,17 @@ public class Interfaz extends javax.swing.JFrame {
         ColaRefDiego = new javax.swing.JTextArea();
         jLabel16 = new javax.swing.JLabel();
         textoAI = new javax.swing.JTextField();
-        CombateVentana = new javax.swing.JButton();
         jLabel18 = new javax.swing.JLabel();
         textoAI2 = new javax.swing.JTextField();
-        Estudio1Pelea = new javax.swing.JTextField();
-        Estudio2Pelea = new javax.swing.JTextField();
+        jTabbedPane1 = new javax.swing.JTabbedPane();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        CambiarTiempo1 = new javax.swing.JTextField();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        Estudio1Pelea = new javax.swing.JTextArea();
+        jScrollPane10 = new javax.swing.JScrollPane();
+        Estudio2Pelea = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -94,7 +99,7 @@ public class Interfaz extends javax.swing.JFrame {
         jLabel1.setText("                                                    HBO MAX VZLA + ");
         jLabel1.setNextFocusableComponent(jLabel1);
         jLabel1.setOpaque(true);
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 80));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 60));
 
         ColaKevin3.setEditable(false);
         ColaKevin3.setColumns(20);
@@ -173,23 +178,19 @@ public class Interfaz extends javax.swing.JFrame {
         jLabel10.setText("COLA PRIORIDAD 2 ");
         getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 170, -1, -1));
 
-        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel11.setText("Presencia la lucha: ");
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 730, -1, -1));
-
         jLabel12.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel12.setText("COLA DE REFUERZO");
         getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 370, -1, -1));
 
         jLabel13.setText("Cambiar Velocidad");
-        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 750, -1, -1));
+        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 620, -1, -1));
 
-        CambiarTiempo.addActionListener(new java.awt.event.ActionListener() {
+        Ganador.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CambiarTiempoActionPerformed(evt);
+                GanadorActionPerformed(evt);
             }
         });
-        getContentPane().add(CambiarTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 750, 80, -1));
+        getContentPane().add(Ganador, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 760, 210, -1));
 
         jButton1.setText("Cambiar!");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -197,10 +198,10 @@ public class Interfaz extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 750, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 620, -1, -1));
 
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Rick-And-Morty-PNG-Images-HD (1).png"))); // NOI18N
-        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 320, 310, 420));
+        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 160, 310, 420));
 
         jLabel15.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel15.setText("COLA PRIORIDAD 3 ");
@@ -225,17 +226,9 @@ public class Interfaz extends javax.swing.JFrame {
         });
         getContentPane().add(textoAI, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 550, 60, 40));
 
-        CombateVentana.setText("Pelea!");
-        CombateVentana.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CombateVentanaActionPerformed(evt);
-            }
-        });
-        getContentPane().add(CombateVentana, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 732, 80, 30));
-
         jLabel18.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel18.setText("AI revisando ID: ");
-        getContentPane().add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 570, -1, -1));
+        jLabel18.setText("Capitulo Estudio 1");
+        getContentPane().add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 620, -1, -1));
 
         textoAI2.setEditable(false);
         textoAI2.addActionListener(new java.awt.event.ActionListener() {
@@ -244,20 +237,50 @@ public class Interfaz extends javax.swing.JFrame {
             }
         });
         getContentPane().add(textoAI2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 570, 60, 40));
-        getContentPane().add(Estudio1Pelea, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 630, 240, 70));
-        getContentPane().add(Estudio2Pelea, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 630, 220, 70));
+        getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, -1, -1));
+
+        jLabel19.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel19.setText("Ganador:");
+        getContentPane().add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 710, -1, -1));
+
+        jLabel20.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel20.setText("AI revisando ID: ");
+        getContentPane().add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 570, -1, -1));
+
+        jLabel21.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel21.setText("Capitulo Estudio 2");
+        getContentPane().add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 630, -1, -1));
+
+        CambiarTiempo1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CambiarTiempo1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(CambiarTiempo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 620, 80, -1));
+
+        Estudio1Pelea.setColumns(20);
+        Estudio1Pelea.setRows(5);
+        jScrollPane5.setViewportView(Estudio1Pelea);
+
+        getContentPane().add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 670, 280, 160));
+
+        Estudio2Pelea.setColumns(20);
+        Estudio2Pelea.setRows(5);
+        jScrollPane10.setViewportView(Estudio2Pelea);
+
+        getContentPane().add(jScrollPane10, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 680, 270, 150));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void CambiarTiempoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CambiarTiempoActionPerformed
+    private void GanadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GanadorActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_CambiarTiempoActionPerformed
+    }//GEN-LAST:event_GanadorActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
        try{
-            String answer = CambiarTiempo.getText();
+            String answer = CambiarTiempo1.getText();
             int option = Integer.parseInt(answer);
             Proyecto2Operativos.tiempo = option; 
             
@@ -271,14 +294,13 @@ public class Interfaz extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_textoAIActionPerformed
 
-    private void CombateVentanaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CombateVentanaActionPerformed
-        Combate newframe = new Combate();
-        newframe.setVisible(true);
-    }//GEN-LAST:event_CombateVentanaActionPerformed
-
     private void textoAI2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textoAI2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_textoAI2ActionPerformed
+
+    private void CambiarTiempo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CambiarTiempo1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CambiarTiempo1ActionPerformed
     
     public void setTextColaKevin1(String text){
         ColaKevin1.setText(text);
@@ -317,12 +339,17 @@ public class Interfaz extends javax.swing.JFrame {
         textoAI.setText(text);
 
     }
-        public void setTextColaDiegoPelea(String text){
+        public void setDiegoPelea(String text){
         Estudio2Pelea.setText(text);
     }
-        public void setTextColaKevinPelea(String text){
+        public void setKevinPelea(String text){
         Estudio1Pelea.setText(text);
     }
+        
+        public void setGanador(String text){
+        Ganador.setText(text);
+    }
+
     /**
      * @param args the command line arguments
      */
@@ -359,7 +386,7 @@ public class Interfaz extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField CambiarTiempo;
+    private javax.swing.JTextField CambiarTiempo1;
     private javax.swing.JTextArea ColaDiego1;
     private javax.swing.JTextArea ColaDiego2;
     private javax.swing.JTextArea ColaDiego3;
@@ -368,20 +395,22 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JTextArea ColaKevin3;
     private javax.swing.JTextArea ColaRefDiego;
     private javax.swing.JTextArea ColaRefuerzo;
-    private javax.swing.JButton CombateVentana;
-    private javax.swing.JTextField Estudio1Pelea;
-    private javax.swing.JTextField Estudio2Pelea;
+    private javax.swing.JTextArea Estudio1Pelea;
+    private javax.swing.JTextArea Estudio2Pelea;
+    private javax.swing.JTextField Ganador;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -390,13 +419,16 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane10;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JScrollPane jScrollPane9;
+    private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextField textoAI;
     private javax.swing.JTextField textoAI2;
     // End of variables declaration//GEN-END:variables

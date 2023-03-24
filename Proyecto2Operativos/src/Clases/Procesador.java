@@ -25,33 +25,50 @@ public class Procesador {
         
     }
     
-    public void Pelear(SerieKevin temp,SerieDiego temp2,Combate combate){
+    public void Pelear(SerieKevin temp,SerieDiego temp2,Interfaz interfaz){
         
+       
+ 
+        interfaz.setKevinPelea("\n"+"\n"+"ID:"+temp.id+"\n"+"\n"+"Nombre del episodio: "+temp.NombreEpisodio+"\n"+"\n"+" Nombre del personaje: "+temp.Nombrepersonaje);
+        interfaz.setDiegoPelea("\n"+"\n"+"ID:"+temp2.id+"\n"+"\n"+"Nombre del episodio: "+temp2.episodio+"\n"+"\n"+ "Nombre del personaje: "+temp2.personaje);
         
+        if(temp.totalcalidad>temp2.calidad){
+            interfaz.setGanador(temp.NombreEpisodio);
+        }else if(temp.totalcalidad< temp2.calidad){
+            interfaz.setGanador(temp2.episodio);
+        }else{
+            if(temp.tiempo>temp2.tiempo){
+            interfaz.setGanador(temp.NombreEpisodio);
+        }else{
+            interfaz.setGanador(temp2.episodio);
+        }
         
-        combate.setTextColaKevinPelea(temp.NombreEpisodio);
-        combate.setTextColaDiegoPelea(temp2.episodio);
-        
+    }
     }
 
     public void RevisarSeries(QueueKevin QueueKevin1, QueueKevin QueueKevin2, QueueKevin QueueKevin3, QueueKevin QueueKevinRefuerzo, QueueKevin QueueKevinPelea,
             ColaDiego ColaDiego1,ColaDiego ColaDiego2,ColaDiego ColaDiego3,ColaDiego ColaDiegoRefuerzo,ColaDiego ColaDiegoPelea ,Interfaz interfaz, Combate combate) {
-
+        
+        interfaz.setDiegoPelea("");
+        interfaz.setKevinPelea("");
+        interfaz.setGanador("");
         int prob = new Random().nextInt(100);
      
-            if (prob < 80) {
+            if (prob < 40) {
                 if(!QueueKevin1.isVacio()){
                       temp = QueueKevin1.extraer();      
-                        
+                      interfaz.setidKevin(Integer.toString(temp.id));  
 
                     }
                     else if(!QueueKevin2.isVacio()){
-                        temp = QueueKevin2.extraer();  
+                        temp = QueueKevin2.extraer(); 
+                        interfaz.setidKevin(Integer.toString(temp.id));
                         
 
 
                     }else if(!QueueKevin3.isVacio()){
                         temp = QueueKevin3.extraer();
+                        interfaz.setidKevin(Integer.toString(temp.id));
                     }
                         
                 else{
@@ -60,13 +77,16 @@ public class Procesador {
                 
             if(!ColaDiego1.isEmpty()){
                        temp2 = ColaDiego1.Desencolar();
+                       interfaz.setidDiego(Integer.toString(temp2.id));
                         
                     }
                         else if (!ColaDiego2.isEmpty()){
                        temp2 = ColaDiego2.Desencolar();
+                       interfaz.setidDiego(Integer.toString(temp2.id));
                         
                     }else if(!ColaDiego3.isEmpty()){
                        temp2 = ColaDiego3.Desencolar();
+                       interfaz.setidDiego(Integer.toString(temp2.id));
                         
                     }
                     else{
@@ -75,12 +95,12 @@ public class Procesador {
                 if(temp == null){
                   
                 }else{
-                    Pelear(temp,temp2,combate); 
+                    Pelear(temp,temp2,interfaz); 
                 }
                   
 
       
-            } else if (prob >= 81 && prob <= 95) {
+            } else if (prob >= 40 && prob <= 77) {
                 
                 if(!QueueKevin1.isVacio()){
                         temp = QueueKevin1.extraer();      

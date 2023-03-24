@@ -17,7 +17,7 @@ public class Proyecto2Operativos {
     static Administrador administrador;
     static Procesador procesador;
     static AdminDiego admin;
-    public static int tiempo = 10;
+    public static int tiempo = 2;
     /**
      * @param args the command line arguments
      */
@@ -85,7 +85,7 @@ public class Proyecto2Operativos {
             
     
         
-        Thread.sleep(300);  
+        Thread.sleep(tiempo*1000);  
         }
         
     }

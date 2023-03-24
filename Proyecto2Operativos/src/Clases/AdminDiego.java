@@ -97,15 +97,15 @@ public class AdminDiego {
         
         if (contador == 0){
             int numeroAleatorio = random.nextInt(60)+1;
-            SerieDiego SerieEstudio2 = new SerieDiego (this.ID, 3,0, intro, inicio,cierre,creditos,contador,episodio,personaje,numeroAleatorio);
+            SerieDiego SerieEstudio2 = new SerieDiego (this.ID, 3,0, intro, inicio,cierre,creditos,contador,personaje,episodio,numeroAleatorio);
             this.prio3.Encolar(SerieEstudio2);
         } else if (contador > 0 && contador < 3){
             int numeroAleatorio = random.nextInt(30)+60;
-            SerieDiego SerieEstudio2 = new SerieDiego (this.ID, 2,0, intro, inicio,cierre,creditos,contador,episodio,personaje,numeroAleatorio);
+            SerieDiego SerieEstudio2 = new SerieDiego (this.ID, 2,0, intro, inicio,cierre,creditos,contador,personaje,episodio,numeroAleatorio);
              this.prio2.Encolar(SerieEstudio2);
         } else {
             int numeroAleatorio = random.nextInt(31)+90;
-            SerieDiego SerieEstudio2 = new SerieDiego (this.ID, 1,0, intro, inicio,cierre,creditos,contador,episodio,personaje,numeroAleatorio);
+            SerieDiego SerieEstudio2 = new SerieDiego (this.ID, 1,0, intro, inicio,cierre,creditos,contador,personaje,episodio,numeroAleatorio);
              this.prio1.Encolar(SerieEstudio2);
         }
                 
