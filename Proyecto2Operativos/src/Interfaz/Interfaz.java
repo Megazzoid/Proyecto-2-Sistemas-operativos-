@@ -16,6 +16,7 @@ import javax.swing.JOptionPane;
  */
 public class Interfaz extends javax.swing.JFrame {
 
+
    
 
 
@@ -168,7 +169,7 @@ public class Interfaz extends javax.swing.JFrame {
         getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 170, -1, -1));
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel11.setText("AI revisando ID: ");
+        jLabel11.setText("Administrador:");
         getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 650, -1, -1));
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -208,14 +209,14 @@ public class Interfaz extends javax.swing.JFrame {
         getContentPane().add(jScrollPane9, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 410, 250, 130));
 
         textoAdmin.setEditable(false);
-        textoAdmin.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        textoAdmin.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         textoAdmin.setText("Esperando");
         textoAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 textoAdminActionPerformed(evt);
             }
         });
-        getContentPane().add(textoAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 640, 180, 40));
+        getContentPane().add(textoAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 640, 180, 40));
 
         jLabel16.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel16.setText("AI revisando ID: ");
@@ -285,6 +286,14 @@ public class Interfaz extends javax.swing.JFrame {
     
     public void setTextColaDiego4(String text){
         ColaRefDiego.setText(text);
+    }
+    public void setTextColaDiegoAdmin(String text){
+        textoAdmin.setText(text);
+    }
+    
+       public void setTextColaDiegoAI(String text){
+        textoAI.setText(text);
+
     }
     /**
      * @param args the command line arguments
