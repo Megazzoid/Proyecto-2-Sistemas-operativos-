@@ -61,7 +61,7 @@ public class ColaDiego {
         String text="";
          while (aux != null) {
             SerieDiego temp = aux.data;
-            text = text + "ID: " + temp.id + " - PRIORIDAD: " + temp.prio + " - CONTADOR:" + temp.contador + "\n";
+            text = text + "ID: " + temp.id + " - PRIORIDAD: " + temp.prio + " - CONTADOR:" + temp.contador +  " DURACION "+ temp.tiempo+"MINUTOS"+"\n";
             aux = aux.next;
         }
         return text;
