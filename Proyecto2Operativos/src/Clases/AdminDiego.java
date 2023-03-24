@@ -19,6 +19,7 @@ public class AdminDiego {
     ColaDiego prio2;
     ColaDiego prio3;
     ColaDiego prioRef;
+    ColaDiego prioPelea;
     private int ID;
      Random rand = new Random();
     int contador = 0;
@@ -45,6 +46,7 @@ public class AdminDiego {
         this.prio2 = new ColaDiego();
         this.prio3 = new ColaDiego();
         this.prioRef = new ColaDiego();
+        this.prioPelea = new ColaDiego();
         this.ID = 1;
     }
     
@@ -151,24 +153,29 @@ public class AdminDiego {
                 temp.intro = "Calidad";
                 temp.cierre = "Calidad";
                 temp.creditos = "Calidad";
+                prio1.Encolar(temp);
                 
-                if(temp.prio == 1){
-                    prio1.Encolar(temp);
-
-                }else if(temp.prio == 2){
-                    prio2.Encolar(temp);
-                }else{
-                    prio3.Encolar(temp);
-                }
-              
-        }
-            
         }else{
             System.out.println("Se quedo");
         }
     }
 
         
+        }
+        
+        public void EntrarPeleaDiego(){
+            
+            if(!this.prioPelea.isEmpty()){
+            
+                SerieDiego temp = this.prio1.Desencolar();
+                prioPelea.Encolar(temp);
+                
+        }else{
+            System.out.println("Se quedo");
+        }
+    }
 
+        
+        
     
 }
