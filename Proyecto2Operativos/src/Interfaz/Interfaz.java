@@ -75,6 +75,8 @@ public class Interfaz extends javax.swing.JFrame {
         CombateVentana = new javax.swing.JButton();
         jLabel18 = new javax.swing.JLabel();
         textoAI2 = new javax.swing.JTextField();
+        Estudio1Pelea = new javax.swing.JTextField();
+        Estudio2Pelea = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -242,6 +244,8 @@ public class Interfaz extends javax.swing.JFrame {
             }
         });
         getContentPane().add(textoAI2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 570, 60, 40));
+        getContentPane().add(Estudio1Pelea, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 630, 240, 70));
+        getContentPane().add(Estudio2Pelea, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 630, 220, 70));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -313,6 +317,12 @@ public class Interfaz extends javax.swing.JFrame {
         textoAI.setText(text);
 
     }
+        public void setTextColaDiegoPelea(String text){
+        Estudio2Pelea.setText(text);
+    }
+        public void setTextColaKevinPelea(String text){
+        Estudio1Pelea.setText(text);
+    }
     /**
      * @param args the command line arguments
      */
@@ -359,6 +369,8 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JTextArea ColaRefDiego;
     private javax.swing.JTextArea ColaRefuerzo;
     private javax.swing.JButton CombateVentana;
+    private javax.swing.JTextField Estudio1Pelea;
+    private javax.swing.JTextField Estudio2Pelea;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
