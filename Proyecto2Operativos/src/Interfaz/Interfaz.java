@@ -25,6 +25,7 @@ public class Interfaz extends javax.swing.JFrame {
      */
     public Interfaz() {
         initComponents();
+
     }
 
     /**
@@ -72,6 +73,8 @@ public class Interfaz extends javax.swing.JFrame {
         textoAdmin = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
         textoAI = new javax.swing.JTextField();
+        jLabel17 = new javax.swing.JLabel();
+        CombateVentana = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -169,22 +172,22 @@ public class Interfaz extends javax.swing.JFrame {
         getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 170, -1, -1));
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel11.setText("Administrador:");
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 650, -1, -1));
+        jLabel11.setText("Presencia la lucha: ");
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 730, -1, -1));
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel12.setText("COLA DE REFUERZO");
         getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 370, -1, -1));
 
         jLabel13.setText("Cambiar Velocidad");
-        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 770, -1, -1));
+        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 750, -1, -1));
 
         CambiarTiempo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CambiarTiempoActionPerformed(evt);
             }
         });
-        getContentPane().add(CambiarTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 770, 80, -1));
+        getContentPane().add(CambiarTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 750, 80, -1));
 
         jButton1.setText("Cambiar!");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -192,7 +195,7 @@ public class Interfaz extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 770, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 750, -1, -1));
 
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Rick-And-Morty-PNG-Images-HD (1).png"))); // NOI18N
         getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 320, 310, 420));
@@ -230,6 +233,18 @@ public class Interfaz extends javax.swing.JFrame {
         });
         getContentPane().add(textoAI, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 570, 60, 40));
 
+        jLabel17.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel17.setText("Administrador:");
+        getContentPane().add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 650, -1, -1));
+
+        CombateVentana.setText("Pelea!");
+        CombateVentana.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CombateVentanaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(CombateVentana, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 732, 80, 30));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -257,6 +272,11 @@ public class Interfaz extends javax.swing.JFrame {
     private void textoAIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textoAIActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_textoAIActionPerformed
+
+    private void CombateVentanaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CombateVentanaActionPerformed
+        Combate newframe = new Combate();
+        newframe.setVisible(true);
+    }//GEN-LAST:event_CombateVentanaActionPerformed
     
     public void setTextColaKevin1(String text){
         ColaKevin1.setText(text);
@@ -340,6 +360,7 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JTextArea ColaKevin3;
     private javax.swing.JTextArea ColaRefDiego;
     private javax.swing.JTextArea ColaRefuerzo;
+    private javax.swing.JButton CombateVentana;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -349,6 +370,7 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
