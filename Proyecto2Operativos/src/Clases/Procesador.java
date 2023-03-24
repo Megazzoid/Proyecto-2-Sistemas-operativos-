@@ -5,6 +5,7 @@
  */
 package Clases;
 
+import Interfaz.Combate;
 import Interfaz.Interfaz;
 import java.util.Random;
 import java.util.logging.Level;
@@ -21,14 +22,31 @@ public class Procesador {
         
     }
 
-    public void RevisarSeries(QueueKevin QueueKevin1, QueueKevin QueueKevin2, QueueKevin QueueKevin3, QueueKevin QueueKevinRefuerzo,
-            ColaDiego ColaDiego1,ColaDiego ColaDiego2,ColaDiego ColaDiego3,ColaDiego ColaDiegoRefuerzo,Interfaz interfaz) {
+    public void RevisarSeries(QueueKevin QueueKevin1, QueueKevin QueueKevin2, QueueKevin QueueKevin3, QueueKevin QueueKevinRefuerzo, QueueKevin QueueKevinPelea,
+            ColaDiego ColaDiego1,ColaDiego ColaDiego2,ColaDiego ColaDiego3,ColaDiego ColaDiegoRefuerzo,ColaDiego ColaDiegoPelea ,Interfaz interfaz, Combate combate) {
 
         int prob = new Random().nextInt(100);
      
-            if (prob < 1) {
+            if (prob < 80) {
+                
+                System.out.println("peleaaaaaaaaaaaaa");
+                 
+                if(!QueueKevinPelea.isVacio()){
+                        SerieKevin temp = QueueKevin1.extraer();      
+                        QueueKevinPelea.insertar(temp);
+                } else {
+                        System.out.println("No paso"); 
+                    }
+                if(!ColaDiegoPelea.isEmpty()){
+                        SerieDiego temp = ColaDiego1.Desencolar();
+                        ColaDiegoPelea.Encolar(temp);    
+                    }
+                    else{
+                        System.out.println("No paso"); 
+                    }
+
       
-            } else if (prob >= 40 && prob <= 67) {
+            } else if (prob >= 81 && prob <= 95) {
                 
                 if(!QueueKevin1.isVacio()){
                         SerieKevin temp = QueueKevin1.extraer();      
